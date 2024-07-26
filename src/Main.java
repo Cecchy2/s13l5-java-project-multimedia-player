@@ -8,6 +8,25 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Video videoProva = new Video("videoProva", 3, 4, 6);
+        videoProva.alzaVolume();
+        videoProva.play();
+        videoProva.diminuisciLuminosita();
+        videoProva.play();
+
+        Immagine immagineProva = new Immagine("immagineProva", 3);
+        immagineProva.show();
+        immagineProva.aumentaLuminosita();
+        immagineProva.show();
+
+        AudioRecording audioProva = new AudioRecording("audioProva", 4, 6);
+        audioProva.play();
+        audioProva.abbassaVolume();
+        audioProva.abbassaVolume();
+        audioProva.play();
+
+        /*----------SCANNER--------*/
+
         Scanner scanner = new Scanner(System.in);
         MultimediaElement[] multimedia = new MultimediaElement[5];
 
@@ -65,7 +84,5 @@ public class Main {
             }
         }
         scanner.close();
-
     }
-
 }
