@@ -15,4 +15,11 @@ public abstract class MultimediaElement {
     public void setTitolo(String titolo) {
         titolo = titolo;
     }
+
+    @Override
+    public String toString() {
+        return "MultimediaElement{" +
+                "titolo='" + titolo + '\'' +
+                '}';
+    }
 }

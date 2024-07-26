@@ -19,12 +19,11 @@ public class Main {
                 case "audio":
                     System.out.println("Inserisci il titolo");
                     String titoloAudio = scanner.nextLine();
-                    System.out.println("inserisci durata (da 1 a 5)");
+                    System.out.println("inserisci durata");
                     int durata = Integer.parseInt(scanner.nextLine());
                     System.out.println("inserisci il volume(da 1 a 5)");
                     int volume = Integer.parseInt(scanner.nextLine());
-                    AudioRecording audio1 = new AudioRecording(titoloAudio, durata, volume);
-                    audio1.play();
+                    multimedia[i] = new AudioRecording(titoloAudio, durata, volume);
                     break;
                 case "video":
                     System.out.println("Inserisci il titolo");
@@ -33,9 +32,9 @@ public class Main {
                     int luminositaVideo = Integer.parseInt(scanner.nextLine());
                     System.out.println("inserisci il volume(da 1 a 5)");
                     int volumeVideo = Integer.parseInt(scanner.nextLine());
-                    System.out.println("Inserisci durata (da 1 a 5)");
+                    System.out.println("Inserisci durata");
                     int durataVideo = Integer.parseInt(scanner.nextLine());
-                    Video video = new Video(titoloVideo, luminositaVideo, volumeVideo, durataVideo);
+                    multimedia[i] = new Video(titoloVideo, luminositaVideo, volumeVideo, durataVideo);
                     break;
 
                 case "immagine":
@@ -43,7 +42,7 @@ public class Main {
                     String titoloImmagine = scanner.nextLine();
                     System.out.println("inserisci luminosità (da 1 a 5)");
                     int luminositaImmagine = Integer.parseInt(scanner.nextLine());
-                    Immagine immagine = new Immagine(titoloImmagine, luminositaImmagine);
+                    multimedia[i] = new Immagine(titoloImmagine, luminositaImmagine);
                     break;
                 default:
                     System.out.println("Errore nella creazione del file");
@@ -65,5 +64,8 @@ public class Main {
                 ((Immagine) sceltaMultimedia).show();
             }
         }
+        scanner.close();
+
     }
+
 }
